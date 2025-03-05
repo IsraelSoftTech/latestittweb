@@ -54,7 +54,6 @@
           <li><a href="services.html">Services</a></li>
           <li><a href="portfolio.html">Portfolio</a></li>
           <li><a href="team.html">Team</a></li>
-          <li><a href="intern.html">Internship</a></li>
           <!-- <li><a href="blog.html">Blog</a></li> -->
           <!-- <li class="dropdown"><a href="#"><span>Dropdown</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
             <ul>
@@ -73,7 +72,8 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li> -->
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="intern.html" class="active">Internship</a></li>
+          <li><a href="contact.html">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
@@ -84,19 +84,19 @@
   <main class="main">
 
     <!-- Page Title -->
-    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/contact-page-title-bg.png);">
+    <div class="page-title dark-background" data-aos="fade" style="background-image: url(assets/img/portfolio/product-3.jpg);">
       <div class="container">
-        <h1>Contact</h1>
+        <h1>Internship</h1>
         <nav class="breadcrumbs">
           <ol>
             <li><a href="index.html">Home</a></li>
-            <li class="current">Contact</li>
+            <li class="current">Internship</li>
           </ol>
         </nav>
       </div>
     </div><!-- End Page Title -->
 
-    <!-- Contact Section -->
+    <!--Internship -->
     <section id="contact" class="contact section">
 
       <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
@@ -105,90 +105,155 @@
 
           <div class="col-lg-5">
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="200">
-              <i class="bi bi-geo-alt flex-shrink-0"></i>
+              <i class=""></i>
               <div>
-                <h3>Address</h3>
-                <p>Cameroon,Bamenda</p>
+                <h3>Become an Intern</h3>
+                <p>With Us</p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="300">
-              <i class="bi bi-telephone flex-shrink-0"></i>
+              <i class=""></i>
               <div>
-                <h3>Call Us</h3>
-                <p>+237 675644383</p>
+                <h3>Competent Trainers</h3>
+                <p>Hands on Projects</p>
               </div>
             </div><!-- End Info Item -->
 
             <div class="info-item d-flex" data-aos="fade-up" data-aos-delay="400">
-              <i class="bi bi-envelope flex-shrink-0"></i>
+              <i class=""></i>
               <div>
-                <h3>Email Us</h3>
-                <p>iminuifuong@gmail.com</p>
+                <h3>Company Technologies</h3>
+                <p>Company Tools</p>
               </div>
             </div><!-- End Info Item -->
 
           </div>
-
+<!-- application -->
           <div class="col-lg-7">
             <form id="contact-form" class="php-email-form" data-aos="fade-up" data-aos-delay="500">
                 <div class="row gy-4">
         
                     <div class="col-md-6">
-                        <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
+                        <input type="text" id="name" name="name" class="form-control" placeholder="Enter Your Full Name" required>
                     </div>
         
                     <div class="col-md-6">
+                        <input type="text" id="address" class="form-control" name="address" placeholder="Your Address" required>
+                    </div>
+                    <div class="col-md-6">
                         <input type="email" id="email" class="form-control" name="email" placeholder="Your Email" required>
                     </div>
-        
-                    <div class="col-md-12">
-                        <input type="text" id="subject" class="form-control" name="subject" placeholder="Subject" required>
+                    <div class="col-md-6">
+                        <input type="text" id="number" class="form-control" name="number" placeholder="Your Phone" required>
                     </div>
-        
-                    <div class="col-md-12">
-                        <textarea id="message" class="form-control" name="message" rows="6" placeholder="Message" required></textarea>
+                    <div class="col-md-6" style="display: flex;gap:5px;align-items: center;">
+                      <label>Gender</label><br/>
+
+                       <input type="radio" id="male" name="gender" value="Male">
+                       <label for="male">Male</label><br/>
+
+                       <input type="radio" id="female" name="gender" value="Female">
+                       <label for="female">Female</label>
+
                     </div>
+
+                    <div class="col-md-6">
+                      <input type="text" id="school" class="form-control" name="school" placeholder="Your School" required>
+                  </div>
+                    <div class="col-md-6">
+                      <input type="text" id="department/option" class="form-control" name="department" placeholder="Your Department or Option" required>
+                  </div>
+        
+                    <div class="col-md-6" style="box-sizing: border-box;">
+                      <label for="level">What is your current level?</label>
+                    <select id="level" name="level" class="form-control" placeholder="What is your current level?" required>
+                     <option value="beginner" >Beginner Level(Select)</option>
+                     <option value="intermediate" >Intermediate Level(Select)</option>
+                    </select>
+                  </div>
+                  <div class="col-md-6" style="box-sizing: border-box;">
+                    <label for="field">Field of Interest During Internship</label>
+                    <select id="interest" name="interest" class="form-control" placeholder="Your field of interest" required>
+                     <option value="frontend" >Front End Development(Select)</option>
+                     <option value="backend" >Backend Development(Select)</option>
+                     <option value="backend" >UI/UX Design(Select)</option>
+                     <option value="backend" >Software/Hardware Maintenance(Select)</option>
+                     <option value="backend" >Networking and Security(Select)</option>
+                     <option value="backend" >DBMS Development(Select)</option>
+                     <option value="backend" >Basic Computing(Select)</option>
+                    </select>
+                  </div>
+
+                  <div class="col-md-6">
+                    <label for="cv">Your Cv(2MB max,pdf)</label>
+                    <input type="file" id="cv" class="form-control" name="cv" placeholder="" required>
+                </div>
+                  <div class="col-md-6">
+                    <label for="start">Start Date</label>
+                    <input type="date" id="start" class="form-control" name="start" placeholder="" required>
+                </div>
+                 
+                <div class="col-md-6">
+                  <label for="duration">Duration</label>
+                  <select id="duration" name="duration" class="form-control"  required>
+                   <option value="one" >1 Month(Select)</option>
+                   <option value="two" >2 Months(Select)</option>
+                   <option value="three" >3 Months(Select)</option>
+                   <option value="four" >4 Months(Select)</option>
+                   <option value="five" >5 Months(Select)</option>
+                   <option value="six" >6 Months(Select)</option>
+                  </select>
+                </div>
         
                     <div class="col-md-12 text-center">
-                        <button type="submit">Send Message</button>
+                        <button type="submit" style="border-radius: 5px;">Apply</button>
                     </div>
         
                 </div>
             </form>
         </div>
-        
-        <!-- Include EmailJS Library -->
+        <!-- script -->
         <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
         <script>
-            (function() {
-                emailjs.init("udVeGDLa-4ZwbJE0q"); // Replace with your EmailJS Public Key
-            })();
-        </script>
+        document.addEventListener("DOMContentLoaded", function () {
+            emailjs.init("udVeGDLa-4ZwbJE0q"); // Replace with your actual EmailJS Public Key
         
-        <script>
-            document.getElementById("contact-form").addEventListener("submit", function(event) {
-                event.preventDefault(); // Prevent form from refreshing the page
+            document.getElementById("contact-form").addEventListener("submit", function (event) {
+                event.preventDefault(); // Stop form submission
         
-                emailjs.send("service_szsr1nc", "template_8xmspgr", {
-                    name: document.getElementById("name").value,
-                    email: document.getElementById("email").value,
-                    subject: document.getElementById("subject").value,
-                    message: document.getElementById("message").value
-                }).then(
-                    function(response) {
-                        alert("Your message has been sent successfully!");
-                        document.getElementById("contact-form").reset(); // Clear the form
-                    },
-                    function(error) {
-                        alert("Failed to send message. Please try again.");
-                    }
-                );
+                let formData = {
+                    fullName: document.getElementById("name")?.value || "Not Provided",
+                    address: document.getElementById("address")?.value || "Not Provided",
+                    email: document.getElementById("email")?.value || "Not Provided",
+                    number: document.getElementById("number")?.value || "Not Provided",
+                    gender: document.querySelector('input[name="gender"]:checked')?.value || "Not specified",
+                    school: document.getElementById("school")?.value || "Not Provided",
+                    department: document.getElementById("department/option")?.value || "Not Provided",
+                    level: document.getElementById("level")?.value || "Not Provided",
+                    interest: document.getElementById("interest")?.value || "Not Provided",
+                    start: document.getElementById("start")?.value || "Not Provided",
+                    duration: document.getElementById("duration")?.value || "Not Provided",
+                    cv: document.getElementById("cv")?.value || "Not provided"
+                };
+        
+                emailjs.send("service_ca99owj", "template_h9wh6ir", formData)
+                    .then(function (response) {
+                        alert("Application submitted successfully!");
+                        console.log("SUCCESS!", response.status, response.text);
+                    }, function (error) {
+                        alert("Failed to send application. Please try again.");
+                        console.log("FAILED...", error);
+                    });
             });
+        });
         </script>
         
-<!-- end of form         -->
 
+
+        
+        
+      
         </div>
 
       </div>
