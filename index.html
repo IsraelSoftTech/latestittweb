@@ -95,10 +95,76 @@
       <div class="container">
         <div class="row">
           <div class="col-xl-4">
-            <h1 data-aos="fade-up">Experts in Tech</h1>
+            <h1 data-aos="fade-up" class="falling-text">Experts in Tech</h1>
             <blockquote data-aos="fade-up" data-aos-delay="100">
-              <p>Bringing the Change in the Tech World.</p>
+              <p class="rising-text">Bringing the Change in the Tech World.</p>
             </blockquote>
+            <style>
+              .falling-text span, .rising-text span {
+                display: inline-block;
+                opacity: 0;
+                transform: translateY(50px);
+                animation: fallIn 2s forwards;
+                margin: 2px; /* Add space between letters */
+              }
+
+              .rising-text span {
+                transform: translateY(-50px);
+                animation: riseUp 1s forwards;
+              }
+
+              @keyframes fallIn {
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+
+              @keyframes riseUp {
+                to {
+                  opacity: 1;
+                  transform: translateY(0);
+                }
+              }
+
+              .falling-text, .rising-text {
+                display: inline-block;
+                letter-spacing: 2px; /* Additional letter spacing */
+              }
+            </style>
+            <script>
+              function animateText() {
+                const fallingText = document.querySelector('.falling-text');
+                const risingText = document.querySelector('.rising-text');
+                
+                // Split text into spans with longer delays
+                fallingText.innerHTML = fallingText.textContent.split('').map(char => 
+                  `<span style="animation-delay: ${Math.random() * 1}s">${char}</span>`
+                ).join('');
+                
+                risingText.innerHTML = risingText.textContent.split('').map(char => 
+                  `<span style="animation-delay: ${Math.random() * 1}s">${char}</span>`
+                ).join('');
+
+                // Wait for animations to complete plus 4 seconds
+                setTimeout(() => {
+                  // Fade out
+                  fallingText.style.opacity = '0';
+                  risingText.style.opacity = '0';
+                  
+                  // Wait for fade out
+                  setTimeout(() => {
+                    // Reset and restart
+                    fallingText.style.opacity = '1';
+                    risingText.style.opacity = '1';
+                    animateText();
+                  }, 500);
+                }, 6000); // Increased to 6 seconds to account for slower animations
+              }
+
+              // Start animation when page loads
+              document.addEventListener('DOMContentLoaded', animateText);
+            </script>
             <div class="d-flex" data-aos="fade-up" data-aos-delay="200" style="display:flex;gap:5px">
               <a href="about.html" class="btn-get-started">Get Started</a>
     
@@ -214,7 +280,7 @@
       - Guaranteed Quality – We sell only the best and most reliable brands.<br>
       - Affordable Prices – Enjoy competitive prices without compromising on quality.<br>
       - Latest Technology – Stay ahead with the newest and most innovative devices.<br>
-      - Exceptional Customer Support – We’re here to help and guide you every step of the way.<br><br>
+      - Exceptional Customer Support – We're here to help and guide you every step of the way.<br><br>
       Invest in technology that works for you! Shop with confidence, get the best deals, and experience excellence today! 
     </p>
     <a href="#" class="readmore stretched-link" onclick="toggleSales(event, this)">
@@ -301,7 +367,7 @@
       - Fast Turnaround – Get your orders on time, every time
       - Affordable Rates – Premium quality at unbeatable prices
       
-      From branding to promotional materials, we turn ideas into reality. Let’s create something amazing together!...      
+      From branding to promotional materials, we turn ideas into reality. Let's create something amazing together!...      
     </p>
     <a href="#" class="readmore stretched-link" onclick="toggleDesign(event, this)">
       <span>Know More</span> <i class="bi bi-arrow-right"></i>
@@ -334,7 +400,7 @@
     <h4 class="title">Web Development</h4>
     <p class="description short">
       Elevate Your Online Presence with a Stunning Website or Web App!<br>
-      We don’t just build websites—we craft high-performing, visually stunning, and user-friendly digital solutions that take your business to the next level! Whether you need a website to showcase your brand or a powerful web app to streamline operations, we've got you covered.
+      We don't just build websites—we craft high-performing, visually stunning, and user-friendly digital solutions that take your business to the next level! Whether you need a website to showcase your brand or a powerful web app to streamline operations, we've got you covered.
     </p>
     <p class="description full" style="display: none;">
       We offer a wide range of cutting-edge electronics, including smartphones, computers, printers, projectors, and more, designed to meet your personal and business needs.
@@ -344,7 +410,7 @@
   - Scalable and secure – Future-proof solutions for your business growth
   - Expert support from start to finish – We bring your vision to life!
       
-Let’s create something amazing together! Place your order today and experience excellence!    
+Let's create something amazing together! Place your order today and experience excellence!    
     </p>
     <a href="#" class="readmore stretched-link" onclick="toggleDev(event, this)">
       <span>Know More</span> <i class="bi bi-arrow-right"></i>
@@ -378,7 +444,7 @@ Let’s create something amazing together! Place your order today and experience
     <h4 class="title">Application Development</h4>
     <p class="description short">
       We Build, Deploy & Secure Powerful Mobile & Desktop Applications!<br>
-      We don’t just develop apps—we create high-performance, secure, and scalable mobile and desktop applications tailored to your unique needs. Whether it’s a business solution, e-commerce platform, management system, or custom software, we bring your ideas to life with precision and expertise.
+      We don't just develop apps—we create high-performance, secure, and scalable mobile and desktop applications tailored to your unique needs. Whether it's a business solution, e-commerce platform, management system, or custom software, we bring your ideas to life with precision and expertise.
     </p>
     <p class="description full" style="display: none;">
       - Feature-rich & User-friendly – Intuitive, seamless, and engaging design
@@ -388,15 +454,15 @@ Let’s create something amazing together! Place your order today and experience
      
  Build, Deploy & Secure Powerful Mobile & Desktop Applications!
 
-We don’t just develop apps—we create high-performance, secure, and scalable mobile and desktop applications tailored to your unique needs. Whether it’s a business solution, e-commerce platform, management system, or custom software, we bring your ideas to life with precision and expertise.
+We don't just develop apps—we create high-performance, secure, and scalable mobile and desktop applications tailored to your unique needs. Whether it's a business solution, e-commerce platform, management system, or custom software, we bring your ideas to life with precision and expertise.
 
 - Feature-rich & User-friendly – Intuitive, seamless, and engaging design
 - Cross-platform Compatibility – Android, iOS, Windows & Mac solutions
 - Lightning-fast Performance – Optimized for speed and efficiency
 - Enterprise-grade Security – Protecting your data with top-tier security measures
-- End-to-End Development & Deployment – We handle everything, so you don’t have to!
+- End-to-End Development & Deployment – We handle everything, so you don't have to!
       
-Let’s turn your vision into reality! Contact us today and experience cutting-edge app development!  
+Let's turn your vision into reality! Contact us today and experience cutting-edge app development!  
     </p>
     <a href="#" class="readmore stretched-link" onclick="toggleApp(event, this)">
       <span>Know More</span> <i class="bi bi-arrow-right"></i>
@@ -433,7 +499,7 @@ Let’s turn your vision into reality! Contact us today and experience cutting-e
     <h4 class="title">Cloud Computing and DEVOPS</h4>
     <p class="description short">
       Professional Cloud Computing & DevOps Engineering – Transform Your IT Infrastructure Today! <br>
-      In today’s fast-paced digital world, businesses need scalable, secure, and highly efficient IT solutions. That’s where we come in! We specialize in cloud computing and DevOps engineering, helping you optimize, automate, and accelerate your software development and deployment processes.
+      In today's fast-paced digital world, businesses need scalable, secure, and highly efficient IT solutions. That's where we come in! We specialize in cloud computing and DevOps engineering, helping you optimize, automate, and accelerate your software development and deployment processes.
     </p>
     <p class="description full" style="display: none;">
       - Cloud Solutions – Deploy, manage, and scale applications seamlessly on AWS, Azure, and Google Cloud
@@ -444,7 +510,7 @@ Let’s turn your vision into reality! Contact us today and experience cutting-e
       - High Availability & Performance – Ensuring your applications run with zero downtime
       - Cost Optimization – Reduce infrastructure costs while maximizing efficiency
 
-      Supercharge your business with cutting-edge cloud solutions and DevOps strategies. Let’s build the future together! Contact us today!
+      Supercharge your business with cutting-edge cloud solutions and DevOps strategies. Let's build the future together! Contact us today!
     </p>
     <a href="#" class="readmore stretched-link" onclick="toggleDevops(event, this)">
       <span>Know More</span> <i class="bi bi-arrow-right"></i>
